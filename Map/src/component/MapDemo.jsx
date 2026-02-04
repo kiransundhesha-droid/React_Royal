@@ -13,7 +13,7 @@ const MapDemo = () => {
     <>
     <h1>MapTable</h1>
 
-        <table style={{border:"2px solid black"}}>
+        <table border={2}>
             <thead>
                 <tr>
                     <th>Id</th>
