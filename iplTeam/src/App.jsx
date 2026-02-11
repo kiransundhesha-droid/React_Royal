@@ -14,7 +14,7 @@ function App() {
       <Route path='/' element={<ShowTeam/>}/>
       <Route path='/showTeam' element={<ShowTeam/>}/>
       <Route path='/iplteam/:name/:won' element={<IplTeam/>}/>
-      <Route path='/*' element={<ErrorMsg/>}/>
+      {/* <Route path='/*' element={<ErrorMsg/>}/> */}
     </Routes>
      </>
   )

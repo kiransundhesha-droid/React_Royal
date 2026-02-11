@@ -6,7 +6,7 @@ const Watch = () => {
   return (
     <>
     
-    <h1>WATCHINH...{name}</h1>
+    <h1>WATCHING...{name}</h1>
     </>
   )
 }
