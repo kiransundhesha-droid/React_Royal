@@ -72,6 +72,11 @@ const Navbar = () => {
               </Link>
             </li>
               <li class="nav-item">
+              <Link class="nav-link" to="/FullValidationForm">
+             FullValidationForm
+              </Link>
+            </li>
+              <li class="nav-item">
               <Link class="nav-link" to="/FormValidation1">
              FormValidation
               </Link>
