@@ -11,6 +11,8 @@ import UseState from './Component/UseState'
 import Employee from './Component/Employee'
 import ReactForm from './Component/ReactFormHook/ReactForm'
 import Dropdown from './Component/Dropdown'
+import Formvalidation1 from './Component/FormValidation1'
+
 
 function App() {
   
@@ -34,6 +36,8 @@ function App() {
         <Route path='/Employee' element={<Employee/>}/>
         <Route path='/Form' element={<ReactForm/>}/>
         <Route path='/Dropdown' element={<Dropdown/>}/>
+        <Route path='/Formvalidation1' element={<Formvalidation1/>}/>
+        
       
         
         {/* <Route path='/*' element={<ErrorPageNotFound/>}/> */}
