@@ -13,6 +13,7 @@ import ReactForm from './Component/ReactFormHook/ReactForm'
 import Dropdown from './Component/Dropdown'
 import Formvalidation1 from './Component/FormValidation1'
 import FullValidationForm from './Component/FullValidationForm'
+import FormValidation2 from './Component/FormValidation2'
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/Dropdown' element={<Dropdown/>}/>
         <Route path='/Formvalidation1' element={<Formvalidation1/>}/>
         <Route path='/FullValidationForm' element={<FullValidationForm/>}/>
+        <Route path='/FormValidation2' element={<FormValidation2/>}/>
       
         
         {/* <Route path='/*' element={<ErrorPageNotFound/>}/> */}

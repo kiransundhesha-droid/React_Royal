@@ -81,6 +81,11 @@ const Navbar = () => {
              FormValidation
               </Link>
             </li> 
+              <li class="nav-item">
+              <Link class="nav-link" to="/FormValidation2">
+             FormValidation2
+              </Link>
+            </li> 
           </ul>
         </div>
       </nav>
