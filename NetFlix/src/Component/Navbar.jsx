@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav style={{backgroundColor:"red"}} class="navbar navbar-expand-lg navbar-dark bg-">
+      <nav
+        style={{ backgroundColor: "red" }}
+        class="navbar navbar-expand-lg navbar-dark bg-"
+      >
         <Link class="navbar-brand" to="#">
           Navbar
         </Link>
@@ -22,7 +25,7 @@ const Navbar = () => {
           <ul class="navbar-nav">
             <li class="nav-item active">
               <Link class="nav-link" to="/netflixhome">
-                Home 
+                Home
               </Link>
             </li>
             <li class="nav-item">
@@ -37,55 +40,60 @@ const Navbar = () => {
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="ContactUs">
-               ContactUs
+                ContactUs
               </Link>
-               </li>
+            </li>
             <li class="nav-item">
               <Link class="nav-link" to="/Watch/:Name">
-               Whatching
+                Whatching
               </Link>
-              </li>
+            </li>
 
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/Movies">
-                  movies
+                movies
               </Link>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="UseState">
-                 UseState
+                UseState
               </Link>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/Employee">
-                 Employee
+                Employee
               </Link>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/Form">
                 Form
               </Link>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/Dropdown">
-              Dropdown
+                Dropdown
               </Link>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/FullValidationForm">
-             FullValidationForm
+                FullValidationForm
               </Link>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <Link class="nav-link" to="/FormValidation1">
-             FormValidation
+                FormValidation
               </Link>
-            </li> 
-              <li class="nav-item">
+            </li>
+            <li class="nav-item">
               <Link class="nav-link" to="/FormValidation2">
-             FormValidation2
+                FormValidation2
               </Link>
-            </li> 
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/ApiCall1">
+                ApiCall1
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

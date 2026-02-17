@@ -10,7 +10,7 @@ const FormValidation2 = () => {
   } = useForm({ mode: "all" });
 
   const password = watch("password");
-
+  const [passwordrules, setPasswordrules] = useState(false);
   const [isset, setIsset] = useState(false);
   const [userdata, setUserData] = useState({});
 
@@ -100,6 +100,7 @@ const FormValidation2 = () => {
   const submitHandler = (data) => {
     setUserData(data);
     setIsset(true);
+    setPasswordrules(true)
   };
 
   const error = {
@@ -136,10 +137,11 @@ const FormValidation2 = () => {
         <input
           type="password"
           placeholder="Enter password"
-          {...register("password", validationSchema.passwordvalidate)}
+          {...register("password", validationSchema.passwordvalidate)} onFocus={()=>setPasswordrules(true)} onBlur={()=>setPasswordrules(false)}
         />
         <p style={error}>{errors.password?.message}</p>
-
+        
+        { passwordrules && (
         <ul style={{ listStyle: "none", padding: 0 }}>
           {passwordRules.map((rule, index) => (
             <li key={index} style={{ color: rule.test ? "green" : "black" }}>
@@ -147,7 +149,7 @@ const FormValidation2 = () => {
             </li>
           ))}
         </ul>
-
+        )}
         {/* Confirm Password */}
         Confirm Password:
         <input
