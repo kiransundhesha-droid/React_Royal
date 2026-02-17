@@ -15,6 +15,7 @@ import Formvalidation1 from './Component/FormValidation1'
 import FullValidationForm from './Component/FullValidationForm'
 import FormValidation2 from './Component/FormValidation2'
 import ApiCall1 from './Component/Api/apicall1'
+import ProductCall from './Component/Api/ProductCall'
 
 
 
@@ -44,6 +45,7 @@ function App() {
         <Route path='/FullValidationForm' element={<FullValidationForm/>}/>
         <Route path='/FormValidation2' element={<FormValidation2/>}/>
         <Route path='/ApiCall1' element={<ApiCall1/>}/>
+        <Route path='/ProductCall' element={<ProductCall/>}/>
       
         
         {/* <Route path='/*' element={<ErrorPageNotFound/>}/> */}

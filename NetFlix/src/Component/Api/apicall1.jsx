@@ -13,8 +13,8 @@ const ApiCall1 = () => {
 
         const response = await axios.get("https://node5.onrender.com/user/user/")
         console.log(response);
-
         console.log(response.data.message)
+
         setMessage(response.data.message)
         setUsers(response.data.data)
         // setShow(true)
@@ -23,16 +23,12 @@ const ApiCall1 = () => {
     return (
         <div>
             <h1>API</h1>
-            <button onClick={() => getUser()} onFocus={() => setShow(true)}>get</button>
+            <button onClick={ getUser} onFocus={() => setShow(true)}>get</button>
             <h3>{message}</h3>
 
-            {show &&
+            {show==true &&
                 <table className="table" >
-
-
-
                     <thead >
-
                         <tr>
                             <th>id</th>
                             <th>name</th>
