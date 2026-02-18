@@ -23,17 +23,17 @@ const Navbar = () => {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
+            {/* <li class="nav-item active">
               <Link class="nav-link" to="/netflixhome">
                 Home
               </Link>
-            </li>
-            <li class="nav-item">
+            </li> 
+             <li class="nav-item">
               <Link class="nav-link" to="/netflixshow">
                 Show
               </Link>
-            </li>
-            <li class="nav-item">
+            </li> 
+             <li class="nav-item">
               <Link class="nav-link" to="/About">
                 About
               </Link>
@@ -42,8 +42,8 @@ const Navbar = () => {
               <Link class="nav-link" to="ContactUs">
                 ContactUs
               </Link>
-            </li>
-            <li class="nav-item">
+            </li> 
+             <li class="nav-item">
               <Link class="nav-link" to="/Watch/:Name">
                 Whatching
               </Link>
@@ -53,8 +53,8 @@ const Navbar = () => {
               <Link class="nav-link" to="/Movies">
                 movies
               </Link>
-            </li>
-            <li class="nav-item">
+            </li> 
+             <li class="nav-item">
               <Link class="nav-link" to="UseState">
                 UseState
               </Link>
@@ -63,8 +63,8 @@ const Navbar = () => {
               <Link class="nav-link" to="/Employee">
                 Employee
               </Link>
-            </li>
-            <li class="nav-item">
+            </li> 
+             <li class="nav-item">
               <Link class="nav-link" to="/Form">
                 Form
               </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
               <Link class="nav-link" to="/FormValidation2">
                 FormValidation2
               </Link>
-            </li>
+            </li> */}
             <li class="nav-item">
               <Link class="nav-link" to="/ApiCall1">
                 ApiCall1
@@ -97,6 +97,16 @@ const Navbar = () => {
             <li class="nav-item">
               <Link class="nav-link" to="/ProductCall">
                 ProductCall
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/OmdbApicall">
+                OmdbApicall
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/OmdbApicall2">
+                OmdbApicall2
               </Link>
             </li>
           </ul>

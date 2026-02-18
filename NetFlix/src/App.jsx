@@ -16,7 +16,8 @@ import FullValidationForm from './Component/FullValidationForm'
 import FormValidation2 from './Component/FormValidation2'
 import ApiCall1 from './Component/Api/apicall1'
 import ProductCall from './Component/Api/ProductCall'
-
+import OmdbApicall from './Component/Api/OmdbApicall'
+import OmdbApicall2 from './Component/Api/OmdbApiCall2'
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       {/* <UseState></UseState> */}
      
       <Routes>
-        <Route path='/netflixhome' element={<NetflixHome/>}/>
+        {/* <Route path='/netflixhome' element={<NetflixHome/>}/>
         <Route path='/netflixshow' element={<Netflixshow/>}/>
         
         <Route path='/about' element={<About/>}/>
@@ -43,8 +44,11 @@ function App() {
         <Route path='/Dropdown' element={<Dropdown/>}/>
         <Route path='/Formvalidation1' element={<Formvalidation1/>}/>
         <Route path='/FullValidationForm' element={<FullValidationForm/>}/>
-        <Route path='/FormValidation2' element={<FormValidation2/>}/>
+        <Route path='/FormValidation2' element={<FormValidation2/>}/> */}
+
         <Route path='/ApiCall1' element={<ApiCall1/>}/>
+        <Route path='/OmdbApicall' element={<OmdbApicall/>}/>
+        <Route path='/OmdbApicall2' element={<OmdbApicall2/>}/>
         <Route path='/ProductCall' element={<ProductCall/>}/>
       
         
