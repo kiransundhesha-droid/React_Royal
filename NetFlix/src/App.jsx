@@ -18,6 +18,7 @@ import ApiCall1 from './Component/Api/apicall1'
 import ProductCall from './Component/Api/ProductCall'
 import OmdbApicall from './Component/Api/OmdbApicall'
 import OmdbApicall2 from './Component/Api/OmdbApiCall2'
+import TestApi from './Component/Api/TestApi'
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         <Route path='/OmdbApicall' element={<OmdbApicall/>}/>
         <Route path='/OmdbApicall2' element={<OmdbApicall2/>}/>
         <Route path='/ProductCall' element={<ProductCall/>}/>
+        <Route path='/TestApi' element={<TestApi/>}/>
       
         
         {/* <Route path='/*' element={<ErrorPageNotFound/>}/> */}

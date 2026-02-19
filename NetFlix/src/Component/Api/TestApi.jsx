@@ -1,20 +1,32 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const OmdbApicall = () => {
+const TestApi = () => {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  // Fetch movie list
-  const getmovies = async () => {
+  // Search Movies
+  const searchMovies = async () => {
+    if (!searchTerm) {
+      alert("Please enter movie name");
+      return;
+    }
+
     const res = await axios.get(
-      "http://www.omdbapi.com/?apikey=62c9eb0f&s=welcome"
+      `http://www.omdbapi.com/?apikey=62c9eb0f&s=${searchTerm}`
     );
-    setMovies(res.data.Search);
-    setSelectedMovie(null);
+
+    if (res.data.Response === "False") {
+      alert("Movie not found");
+      setMovies([]);
+    } else {
+      setMovies(res.data.Search);
+      setSelectedMovie(null);
+    }
   };
 
-  // Fetch full movie details
+  // Get Full Movie Details
   const getMovieDetails = async (id) => {
     const res = await axios.get(
       `http://www.omdbapi.com/?apikey=62c9eb0f&i=${id}`
@@ -24,18 +36,29 @@ const OmdbApicall = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>OmdbApicall2</h1>
+      <h1>OMDb Movie Search</h1>
 
-      <button
-        className="btn btn-danger"
-        onClick={getmovies}
-        style={{ marginBottom: "20px" }}
-      >
-        Get Movies
-      </button>
+      {/* SEARCH SECTION */}
+      <div style={{ marginBottom: "20px" }}>
+        <input
+          type="text"
+          placeholder="Enter movie name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          style={{
+            padding: "8px",
+            width: "250px",
+            marginRight: "10px",
+          }}
+        />
 
-      {/* GRID VIEW */}
-      {!selectedMovie && (
+        <button className="btn btn-primary" onClick={searchMovies}>
+          Search
+        </button>
+      </div>
+
+      {/* MOVIE GRID */}
+      {!selectedMovie && movies.length > 0 && (
         <div
           style={{
             display: "grid",
@@ -43,44 +66,42 @@ const OmdbApicall = () => {
             gap: "20px",
           }}
         >
-          {movies &&
-            movies.map((movie) => (
-              <div
-                key={movie.imdbID}
+          {movies.map((movie) => (
+            <div
+              key={movie.imdbID}
+              style={{
+                border: "1px solid #ccc",
+                borderRadius: "10px",
+                padding: "10px",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              }}
+            >
+              <img
+                src={movie.Poster}
+                alt={movie.Title}
                 style={{
-                  border: "1px solid #ccc",
-                  borderRadius: "10px",
-                  padding: "10px",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                  width: "100%",
+                  height: "300px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
                 }}
+              />
+
+              <h4 style={{ marginTop: "10px" }}>{movie.Title}</h4>
+              <p>{movie.Year}</p>
+
+              <button
+                className="btn btn-success"
+                onClick={() => getMovieDetails(movie.imdbID)}
               >
-                <img
-                  src={movie.Poster}
-                  alt={movie.Title}
-                  style={{
-                    width: "100%",
-                    height: "300px",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-
-                <h4 style={{ marginTop: "10px" }}>{movie.Title}</h4>
-                <p>{movie.Year}</p>
-
-                {/* BUTTON BELOW POSTER */}
-                <button
-                  className="btn btn-primary"
-                  onClick={() => getMovieDetails(movie.imdbID)}
-                >
-                  View Details
-                </button>
-              </div>
-            ))}
+                View Details
+              </button>
+            </div>
+          ))}
         </div>
       )}
 
-      {/* DETAIL VIEW */}
+      {/* MOVIE DETAILS */}
       {selectedMovie && (
         <div
           style={{
@@ -104,7 +125,7 @@ const OmdbApicall = () => {
             <img
               src={selectedMovie.Poster}
               alt={selectedMovie.Title}
-              style={{ width: "250px", borderRadius: "10px" }}
+              style={{ width: "250px", borderRadius: "50%" }}
             />
 
             <div>
@@ -126,4 +147,4 @@ const OmdbApicall = () => {
   );
 };
 
-export default OmdbApicall;
+export default TestApi ;
